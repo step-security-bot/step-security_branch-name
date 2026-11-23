@@ -17,5 +17,12 @@ jobs:
     - run: npm ci
     - uses: step-security/branch-name@v1
     # Use branch name for whatever purpose
-    - run: echo ${BRANCH_NAME}
+    - run: echo "$BRANCH_NAME"
 ```
+
+## Security note
+
+Branch names are user-controlled and can contain shell metacharacters such as `$()`, backticks, `;` and quotes.
+
+- Always reference the value as a quoted shell variable: `"$BRANCH_NAME"`.
+- Never interpolate it into a script with `${{ env.BRANCH_NAME }}`. GitHub substitutes that expression before the shell parses the script, so a crafted branch name can run arbitrary commands.

@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/step-security/branch-name#readme",
   "dependencies": {
-    "@actions/core": "^1.2.6",
+    "@actions/core": "^2.0.0",
     "axios": "^1.21.1"
   },
   "devDependencies": {
