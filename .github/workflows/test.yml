@@ -1,0 +1,11 @@
+name: "test"
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v7
+    - run: npm ci
+    - uses: ./
+    - run: echo $BRANCH_NAME
