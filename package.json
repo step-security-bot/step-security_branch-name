@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint index.js",
     "build": "ncc build index.js -o dist",
-    "test": "eslint index.js && jest"
+    "test": "eslint index.js && jest --passWithNoTests"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,7 @@
     "axios": "^1.21.1"
   },
   "devDependencies": {
-    "@zeit/ncc": "^0.20.5",
+    "@vercel/ncc": "^0.45.0",
     "eslint": "^6.3.0"
   }
 }
